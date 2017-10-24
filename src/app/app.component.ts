@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  items = ["Chips plain", "Chips Goats Meat", "Chips Chicken", "Pilao Plain", "Pilao and snacks"];
+
+  newItem = "";
+  pushItem = function() {
+    if(this.newItem != "") {
+      this.items.push(this.newItem);
+      this.newItem = "";
+    }
+  }
+
+  removeItem = function(index) {
+    this.items.splice(index, 1);
+  }
 }
