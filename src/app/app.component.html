@@ -1,13 +1,7 @@
-<div class="main">
-    <h1>Menu List</h1>
-    <div classs="adddItem">
-      <input [(ngModel)] = "newItem" placeholder="Add Item" class="addText">
-      <button (click) = "pushItem()">Add</button>
-    </div>
-    <ul>
-      <li *ngFor = "let i of items; let ind = index">
-        {{i}}
-        <span (click) = "removeItem(ind)">X</span>
-      </li>
-    </ul>
-  </div>
+<div id="fullPage">
+    <app-header></app-header>
+
+    <router-outlet></router-outlet>
+
+    <app-lastly></app-lastly>
+</div>
